@@ -3,5 +3,7 @@ PROJECT(prototype)
 
 SET(CMAKE_CXX_STANDARD 17)
 
-SET(SOURCE_FILES main.cpp)
-ADD_EXECUTABLE(prototype ${SOURCE_FILES})
+SET(SOURCE_FILES main.cpp Main.hpp)
+ADD_EXECUTABLE(prototype ${SOURCE_FILES} Main.hpp)
+
+TARGET_LINK_LIBRARIES(prototype pthread)
